@@ -62,8 +62,6 @@ a data-driven web app that lets you:
 - Run **Regression** or **Classification** models
 - Explore **K-Means Clustering**
 - Visualize data interactively with **Plotly**
-
-Upload your dataset below to get started!
 """)
 
 # ---------------------------------------

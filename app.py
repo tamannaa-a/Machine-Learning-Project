@@ -54,14 +54,14 @@ st.markdown("""
 # ---------------------------------------
 # APP TITLE AND INTRO
 # ---------------------------------------
-st.title("🏥 Health Facility ML Analysis Dashboard")
+st.title("🏥 Health Facility Analysis Dashboard")
 st.markdown("""
 Welcome to the **Health Facility ML Dashboard** —  
 a data-driven web app that lets you:
-- 📊 Perform **Exploratory Data Analysis (EDA)**
-- 🤖 Run **Regression** or **Classification** models
-- 🧩 Explore **K-Means Clustering**
-- 🎨 Visualize data interactively with **Plotly**
+- Perform **Exploratory Data Analysis (EDA)**
+- Run **Regression** or **Classification** models
+- Explore **K-Means Clustering**
+- Visualize data interactively with **Plotly**
 
 Upload your dataset below to get started!
 """)
@@ -74,7 +74,7 @@ uploaded_file = st.file_uploader("📂 Upload your CSV dataset", type=["csv"])
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.success("✅ Dataset uploaded successfully!")
-    st.write("### 📘 Dataset Preview:")
+    st.write("### Dataset Preview:")
     st.dataframe(df.head(), use_container_width=True)
 
     # Sidebar Options
@@ -184,7 +184,7 @@ if uploaded_file:
     #  CLUSTERING SECTION
     # =====================================
     elif section == "Clustering":
-        st.subheader("🌀 K-Means Clustering")
+        st.subheader("K-Means Clustering")
 
         numeric_df = df.select_dtypes(include=['int64', 'float64'])
         scaler = StandardScaler()

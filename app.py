@@ -56,7 +56,7 @@ st.markdown("""
 # ---------------------------------------
 st.title("🏥 Health Facility Analysis Dashboard")
 st.markdown("""
-Welcome to the **Health Facility ML Dashboard** —  
+Welcome to the **Health Facility Listing Dashboard of California** —  
 a data-driven web app that lets you:
 - Perform **Exploratory Data Analysis (EDA)**
 - Run **Regression** or **Classification** models

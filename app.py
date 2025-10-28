@@ -1,5 +1,5 @@
 # ======================================
-# INTERACTIVE HEALTH FACILITY ML DASHBOARD
+#  INTERACTIVE HEALTH FACILITY ML DASHBOARD
 # ======================================
 
 import streamlit as st
@@ -72,7 +72,7 @@ uploaded_file = st.file_uploader("📂 Upload your CSV dataset", type=["csv"])
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.success("✅ Dataset uploaded successfully!")
-    st.write("### Dataset Preview:")
+    st.write("### Dataset Preview")
     st.dataframe(df.head(), use_container_width=True)
 
     # Sidebar Options
@@ -80,7 +80,7 @@ if uploaded_file:
     section = st.sidebar.radio("Select Section:", ["EDA", "Modeling", "Clustering"])
 
     # =====================================
-    # EDA SECTION
+    #  EDA SECTION
     # =====================================
     if section == "EDA":
         st.subheader("📊 Exploratory Data Analysis")
@@ -195,16 +195,43 @@ if uploaded_file:
             df['Cluster'] = kmeans.fit_predict(scaled_data)
             st.success(f"✅ K-Means applied successfully with {k} clusters!")
 
+            # PCA Visualization
             pca = PCA(n_components=2)
             reduced_data = pca.fit_transform(scaled_data)
-            fig = px.scatter(x=reduced_data[:,0], y=reduced_data[:,1],
-                             color=df['Cluster'].astype(str),
-                             title=f"Cluster Visualization (k={k})",
-                             color_discrete_sequence=px.colors.qualitative.Set2)
+            fig = px.scatter(
+                x=reduced_data[:, 0],
+                y=reduced_data[:, 1],
+                color=df['Cluster'].astype(str),
+                title=f"Cluster Visualization (k={k})",
+                color_discrete_sequence=px.colors.qualitative.Set2
+            )
             st.plotly_chart(fig, use_container_width=True)
 
-            st.markdown("### 📋 Cluster Summary")
-            st.dataframe(df.groupby('Cluster').mean().style.highlight_max(axis=0))
+            # Pie Chart - Cluster Distribution
+            st.markdown("### Cluster Distribution")
+            cluster_counts = df['Cluster'].value_counts().reset_index()
+            cluster_counts.columns = ['Cluster', 'Count']
+            pie_fig = px.pie(cluster_counts, values='Count', names='Cluster',
+                             color_discrete_sequence=px.colors.sequential.Plasma)
+            st.plotly_chart(pie_fig, use_container_width=True)
+
+            # Numeric Summary
+            cluster_summary = df.select_dtypes(include=['int64', 'float64']).copy()
+            cluster_summary['Cluster'] = df['Cluster']
+            summary = cluster_summary.groupby('Cluster').mean(numeric_only=True)
+
+            st.write("### 📋 Cluster Summary (Numerical Features Only)")
+            st.dataframe(summary.style.highlight_max(axis=0))
+
+            # Radar Chart for each cluster
+            st.markdown("### 🕸️ Radar Chart per Cluster")
+            radar_data = summary.reset_index()
+            features = radar_data.columns[1:]
+            for i, row in radar_data.iterrows():
+                fig = px.line_polar(radar_data, r=row[1:], theta=features,
+                                    line_close=True,
+                                    title=f"Cluster {int(row['Cluster'])} Feature Profile")
+                st.plotly_chart(fig, use_container_width=True)
 
 else:
     st.info("Upload your CSV file to start exploring and modeling!")

@@ -220,11 +220,11 @@ if uploaded_file:
             cluster_summary['Cluster'] = df['Cluster']
             summary = cluster_summary.groupby('Cluster').mean(numeric_only=True)
 
-            st.write("### 📋 Cluster Summary (Numerical Features Only)")
+            st.write("### Cluster Summary")
             st.dataframe(summary.style.highlight_max(axis=0))
 
             # Radar Chart for each cluster
-            st.markdown("### 🕸️ Radar Chart per Cluster")
+            st.markdown("### Radar Chart per Cluster")
             radar_data = summary.reset_index()
             features = radar_data.columns[1:]
             for i, row in radar_data.iterrows():

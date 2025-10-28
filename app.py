@@ -209,4 +209,4 @@ if uploaded_file:
             st.dataframe(df.groupby('Cluster').mean().style.highlight_max(axis=0))
 
 else:
-    st.info("👈 Upload your CSV file to start exploring and modeling!")
+    st.info("Upload your CSV file to start exploring and modeling!")

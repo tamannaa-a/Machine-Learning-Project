@@ -45,3 +45,39 @@ The dataset contains administrative, licensing, and geographical details of heal
 
 # ✅ **🧠 Methodology / Workflow**
 
+
+### Includes:
+- Missing value imputation  
+- Label encoding for categorical columns  
+- StandardScaler for numerical features  
+- PCA for dimensionality reduction  
+- Model comparison (ML & DL)
+
+---
+
+# ✅ **🛠️ Technologies Used**
+
+### **Languages**
+- Python 3  
+
+### **Libraries & Tools**
+- Pandas, NumPy  
+- Scikit-Learn  
+- XGBoost, LightGBM, CatBoost  
+- TensorFlow, Keras  
+- Matplotlib, Seaborn, Plotly  
+- Streamlit  
+- Google Colab  
+- GitHub  
+
+---
+
+# ✅ **📦 Installation**
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/health-facility-analytics.git
+cd health-facility-analytics
+
+

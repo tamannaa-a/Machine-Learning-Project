@@ -1,4 +1,4 @@
-# 🏥 **California Health Facility Analytics – Machine Learning & Deep Learning Project**
+# **California Health Facility Analytics – Machine Learning & Deep Learning Project**
 
 ### **Author:** Tamanna Vaikkath  
 ### **Institution:** Symbiosis Institute of Technology, Nagpur  
@@ -6,7 +6,7 @@
 
 ---
 
-# ✅ **📌 Project Overview**
+# **📌 Project Overview**
 
 This project performs a complete **end-to-end machine learning and deep learning analysis** on the **California Health Facility Listing dataset**. The goal is to understand facility characteristics, predict capacity, classify facility types, and group similar facilities using unsupervised learning.
 
@@ -24,7 +24,7 @@ The project covers:
 
 ---
 
-# ✅ **📊 Dataset Description**
+# **📊 Dataset Description**
 
 The dataset contains administrative, licensing, and geographical details of healthcare facilities across California.
 
@@ -43,7 +43,7 @@ The dataset contains administrative, licensing, and geographical details of heal
 
 ---
 
-# ✅ **🧠 Methodology / Workflow**
+# **🧠 Methodology / Workflow**
 
 
 ### Includes:
@@ -55,7 +55,7 @@ The dataset contains administrative, licensing, and geographical details of heal
 
 ---
 
-# ✅ **🛠️ Technologies Used**
+# **🛠️ Technologies Used**
 
 ### **Languages**
 - Python 3  
@@ -72,7 +72,7 @@ The dataset contains administrative, licensing, and geographical details of heal
 
 ---
 
-# ✅ **📦 Installation**
+# **📦 Installation**
 
 Clone the repository:
 

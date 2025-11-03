@@ -35,22 +35,22 @@ The dataset contains administrative, operational, licensing, and geographical de
 
 Key Attributes:
 
-*Facility type and status
+* Facility type and status
 
-*Approval & license dates
+* Approval & license dates
 
-*Capacity (target for regression)
+* Capacity (target for regression)
 
-*County, district, location details
+* County, district, location details
 
-*Geographic coordinates
+* Geographic coordinates
 
-*Operational and administrative codes
+* Operational and administrative codes
 
-*Target Variables:
+* Target Variables:
 
-*Regression: CAPACITY
+* Regression: CAPACITY
 
-*Classification: Facility category / licensing class
+* Classification: Facility category / licensing class
 
-*Clustering: All numeric + encoded features
+* Clustering: All numeric + encoded features

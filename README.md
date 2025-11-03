@@ -81,7 +81,7 @@ The dataset contains administrative, licensing, and geographical details of heal
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/health-facility-analytics.git
+git clone https://github.com/tamannaa-a/health-facility-analytics.git
 cd health-facility-analytics
 
 

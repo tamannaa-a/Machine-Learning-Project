@@ -3,6 +3,8 @@
 ### **Author:** Tamanna Vaikkath  
 ### **Institution:** Symbiosis Institute of Technology, Nagpur  
 ### **Course:** Machine Learning Lab (TE7105)
+### **Streamlit:** https://machine-learning-project-wocdtcb3bbc2cmt5bhgven.streamlit.app/
+
 
 ---
 

@@ -1,7 +1,7 @@
-🏥 California Health Facility Analytics – Machine Learning & Deep Learning Project
-Author: Tamanna Vaikkath
-Institution: Symbiosis Institute of Technology, Nagpur
-Course: Machine Learning Lab (TE7105)
+** 🏥 California Health Facility Analytics – Machine Learning & Deep Learning Project
+** Author: Tamanna Vaikkath
+** Institution: Symbiosis Institute of Technology, Nagpur
+** Course: Machine Learning Lab (TE7105)
 
 * 📌 Project Overview
 

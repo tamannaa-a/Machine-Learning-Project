@@ -1,4 +1,4 @@
-# **California Health Facility Analytics – Machine Learning & Deep Learning Project**
+# **California Health Facility Analytics – Machine Learning Project**
 
 ### **Author:** Tamanna Vaikkath  
 ### **Institution:** Symbiosis Institute of Technology, Nagpur  
